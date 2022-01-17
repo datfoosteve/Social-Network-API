@@ -15,12 +15,18 @@ const userSchema = new Schema(
       unique: true,
       //mongoose match
     },
+
+    // `thoughts`
+    // * Array of `_id` values referencing the `Thought` model
     thoughts: [
       {
         type: Schema.Types.ObjectId,
         ref: thoughtSchema,
       },
     ],
+
+   // * `friends`
+// * Array of `_id` values referencing the `User` model (self-reference)
     friends: [
       {
         type: Schema.Types.ObjectId,
@@ -36,9 +42,12 @@ const userSchema = new Schema(
   }
 );
 
+
+
 userSchema.virtual("friendCount").get(function () {
   return `${this.friends.length}`;
 });
 
 const User = model("user", UserSchema);
 module.exports = User;
+
