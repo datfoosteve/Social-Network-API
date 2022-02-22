@@ -1,5 +1,5 @@
-const {Schema, model} = require("mongoose");
-const thoughtSchema = require("./Thought");
+/* This is creating a schema for our database. */
+const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
   {
@@ -21,33 +21,33 @@ const userSchema = new Schema(
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: thoughtSchema,
+        ref: "Thought",
       },
     ],
 
-   // * `friends`
-// * Array of `_id` values referencing the `User` model (self-reference)
+    // * `friends`
+    // * Array of `_id` values referencing the `User` model (self-reference)
     friends: [
       {
         type: Schema.Types.ObjectId,
-        ref: userSchema,
+        ref: "User",
       },
-    ]
+    ],
   },
   {
+    /* Telling the JSON.stringify() function to use the getters for the properties. */
     toJSON: {
       getters: true,
-      virtual: true
+      virtual: true,
     },
   }
 );
 
-
-
+/* Adding a virtual property to the userSchema. This virtual property is a getter function that
+returns the length of the friends array. */
 userSchema.virtual("friendCount").get(function () {
   return `${this.friends.length}`;
 });
 
-const User = model("user", UserSchema);
+const User = model("User", userSchema);
 module.exports = User;
-

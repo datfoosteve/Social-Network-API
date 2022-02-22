@@ -1,7 +1,6 @@
-const Student = require('./Student');
-const Course = require('./Course');
-const User = require('./User');
-const Thought = require('./Thought');
+const User = require("./User");
+const Thought = require("./Thought");
 
-module.exports = { Student, Course, User, Thought };
-
+/* Creating a new module called "module.exports" and it is exporting the classes "Student",
+"Course", "User", and "Thought". */
+module.exports = { User, Thought };
