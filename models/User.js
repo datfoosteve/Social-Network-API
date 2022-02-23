@@ -38,7 +38,7 @@ const userSchema = new Schema(
     /* Telling the JSON.stringify() function to use the getters for the properties. */
     toJSON: {
       getters: true,
-      virtual: true,
+      virtuals: true,
     },
   }
 );
