@@ -8,7 +8,7 @@ router
 
 router
   .route("/:thoughtId")
-  .get(thoughtsController.getSingleThoughts)
+  .get(thoughtsController.getSingleThought)
   .put(thoughtsController.updateThought)
   .delete(thoughtsController.deleteThought);
 
