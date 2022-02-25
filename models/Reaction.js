@@ -12,7 +12,7 @@ const reactionSchema = new Schema({
     maxLength: 280,
   },
 
-  userName: {
+  username: {
     type: String,
     required: true,
   },
@@ -25,4 +25,5 @@ const reactionSchema = new Schema({
     },
   },
 });
+
 module.exports = reactionSchema;

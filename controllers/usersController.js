@@ -12,7 +12,7 @@ module.exports = {
 
   // * `GET` a single user by its `_id` and populated
   getSingleUser(req, res) {
-    User.findById(req.params.id)
+    User.findById(req.params.userId)
       .populate("friends")
       .populate("thoughts")
       .then(async (user) => {
