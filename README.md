@@ -1,270 +1,151 @@
-# 18 NoSQL: Social Network API
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&family=Nova+Mono&display=swap" rel="stylesheet">
+<h2 align= "center">
+ 
+# NoSQL(Mongoose and MongoDB) - Social Network API - Assignment 12
 
-## Your Task
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. Over the last part of this course, you’ll use several of the technologies that social networking platforms use in their full-stack applications. Because the foundation of these applications is data, it’s important that you understand how to build and structure the API first.
 
-Your homework is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the [Express.js](https://www.npmjs.com/package/express) and [Mongoose](https://www.npmjs.com/package/mongoose) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript `Date` object to format timestamps.
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/datfoosteve/Social-Network-API?style=plastic)![Lines of code](https://img.shields.io/tokei/lines/github/datfoosteve/Social-Network-API?style=plastic)
 
-No seed data is provided, so you’ll need to create your own data using Insomnia after you’ve created your API.
+</h2>
 
-Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
+## Table of Contents
 
-## User Story
+***
 
-```md
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
-```
+- [NoSQL(Mongoose and MongoDB) - Social Network API - Assignment 12](#nosqlmongoose-and-mongodb---social-network-api---assignment-12)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+    - [How to Test Properly and Easily](#how-to-test-properly-and-easily)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Integration/Deploy Links](#integrationdeploy-links)
+    - [Demo](#demo)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Project/Assignment-Status](#projectassignment-status)
+  - [Future Plans + Questions](#future-plans--questions)
 
-## Acceptance Criteria
+***
+## Description
 
-```md
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
-```
+***
 
-## Mock Up
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&family=Nova+Mono&display=swap" rel="stylesheet">
 
-The following animations show examples of the application's API routes being tested in Insomnia.
 
-The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
 
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/18-nosql-homework-demo-01.gif)
+    Project was developed with starter code. This is an API for a social network web application , where users can share their thoughts, react to friends’ thoughts, and create a friend list. Basically the full back end of a social media app. It uses Mongo and mongoose as its database storage, and uses express as its router for all endpoints. While all programmed using Node.js to tie it all in, its been interesting, and has shown me how social media apps can work conceptually. Getting all the endpoints to work with Mongo and mongoose, made me understand how routing properly works, and how the schemas(models) work as well in relation to MySql. Another step in the direction of completeing the whole stack. 
 
-The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
+### How to Test Properly and Easily
 
-![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./Assets/18-nosql-homework-demo-02.gif)
+    This program was tested through [Insomnia](https://docs.insomnia.rest/) for all its endpoints. Ive included the routes I tested in Insomnia, as a JSON file. (something probably not alot of people have included in their projects) You can import that file into your endpoint tester, or through Insomnia. IF you dont know how to do that, then [click here](docs.insomnia.rest).
 
-The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
+***
+## Installation
 
-![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/18-nosql-homework-demo-03.gif)
+***
+If you are positioned on your root directory, then from
+ the command line, type and run the following commands
 
-In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
+    `npm i`   
 
-The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
+Thats it.
 
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./Assets/18-nosql-homework-demo-04.gif)
 
-In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
+This 'npm i' should install all the packages below, check the package.json
+file if its not installed see if they are even listed as a dependency,
+ and if these files are not listed, these commands below will
+install them and give you an updated version.
 
-## Getting Started
+    `npm install express`
 
-Be sure to have MongoDB installed on your machine. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB locally.
+    `npm install Mongoose`
 
-Use the following guidelines to set up your models and API routes:
+    *Optional* : dotenv (if you plan to run this progam on a remote server)
 
-### Models
+*Note: Node package manager must be installed on your computer in order for these commands to work with the CLI.* 
 
-**User**:
+*<a href = "https://docs.npmjs.com/downloading-and-installing-node-js-and-npm"> Click here to download npm , which gives you the ability to publish and install the dependencies for this application.</a>*
 
-* `username`
-  * String
-  * Unique
-  * Required
-  * Trimmed
+***
+## Usage
 
-* `email`
-  * String
-  * Required
-  * Unique
-  * Must match a valid email address (look into Mongoose's matching validation)
+***
 
-* `thoughts`
-  * Array of `_id` values referencing the `Thought` model
+The only way this can work if you have MongoDB installed on your machine. If not check out the [MongoDB documentation](https://docs.mongodb.com/)
 
-* `friends`
-  * Array of `_id` values referencing the `User` model (self-reference)
+Then after that is installed, run this command on your CLI
 
-**Schema Settings**:
+    `npm i `
 
-Create a virtual called `friendCount` that retrieves the length of the user's `friends` array field on query.
+This command installs all of the dependencies. Feel free to add more , what ever suits your savvy. (idk what that means)
 
----
+to get the server started, run the following commands at root
 
-**Thought**:
+    `npm run start`
 
-* `thoughtText`
-  * String
-  * Required
-  * Must be between 1 and 280 characters
+***
+## Integration/Deploy Links
 
-* `createdAt`
-  * Date
-  * Set default value to the current timestamp
-  * Use a getter method to format the timestamp on query
+### Demo
 
-* `username` (The user that created this thought)
-  * String
-  * Required
+This walkthrough video shows ALL endpoints being tested in Insomnia. No music this time , havent gotten used to Adobe Premier yet. I got a youtube copyright strike last time for the music. Bleh
 
-* `reactions` (These are like replies)
-  * Array of nested documents created with the `reactionSchema`
+[Here is the youtube video of the Demo](https://www.youtube.com/watch?v=lYOAAL03Eo8)
 
-**Schema Settings**:
+If you want to test it, just like I have, refer to the [How to Test Properly and Easily](#how-to-test-properly-and-easily) section.
 
-Create a virtual called `reactionCount` that retrieves the length of the thought's `reactions` array field on query.
+***
+## Credits
 
----
+***
 
-**Reaction** (SCHEMA ONLY)
+Stephen Puthenpurackal
 
-* `reactionId`
-  * Use Mongoose's ObjectId data type
-  * Default value is set to a new ObjectId
+<a href ="https://github.com/sayex" alt="Tutor">Eric Sayez</a>
 
-* `reactionBody`
-  * String
-  * Required
-  * 280 character maximum
+***
+## License
 
-* `username`
-  * String
-  * Required
+***
 
-* `createdAt`
-  * Date
-  * Set default value to the current timestamp
-  * Use a getter method to format the timestamp on query
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Schema Settings**:
+***
+## Project/Assignment-Status
 
-This will not be a model, but rather will be used as the `reaction` field's subdocument schema in the `Thought` model.
+***
 
-### API Routes
+    *Completed and Finalized*
 
-**`/api/users`**
+<img src="https://img.shields.io/github/last-commit/datfoosteve/E-Commerce-Omega" >
 
-* `GET` all users
+***
+## Future Plans + Questions
 
-* `GET` a single user by its `_id` and populated thought and friend data
+***
 
-* `POST` a new user:
+My plans for after the project?
 
-```json
-// example data
-{
-  "username": "lernantino",
-  "email": "lernantino@gmail.com"
-}
-```
+    "Go back over it as reference for anything that has to do with MongoDB and mongoose. To be honest this is just the backend, i want to see how it works
+    with the front end fully fleshed out. i Might have to spend some time doing that once i finish this Full stack program."
 
-* `PUT` to update a user by its `_id`
+***
 
-* `DELETE` to remove user by its `_id`
+Feel Free to email me your questions!
 
-**BONUS**: Remove a user's associated thoughts when deleted.
+Email: stephenandarlie@gmail.com
 
----
+Github: <a href ="https://github.com/datfoosteve">datfoosteve</a>
 
-**`/api/users/:userId/friends/:friendId`**
-
-* `POST` to add a new friend to a user's friend list
-
-* `DELETE` to remove a friend from a user's friend list
-
----
-
-**`/api/thoughts`**
-
-* `GET` to get all thoughts
-
-* `GET` to get a single thought by its `_id`
-
-* `POST` to create a new thought (don't forget to push the created thought's `_id` to the associated user's `thoughts` array field)
-
-```json
-// example data
-{
-  "thoughtText": "Here's a cool thought...",
-  "username": "lernantino",
-  "userId": "5edff358a0fcb779aa7b118b"
-}
-```
-
-* `PUT` to update a thought by its `_id`
-
-* `DELETE` to remove a thought by its `_id`
-
----
-
-**`/api/thoughts/:thoughtId/reactions`**
-
-* `POST` to create a reaction stored in a single thought's `reactions` array field
-
-* `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
-
-## Grading Requirements
-
-This homework is graded based on the following criteria:
-
-### Deliverables: 10%
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 37%
-
-* A walkthrough video that demonstrates the functionality of the social media API must be submitted, and a link to the video should be included in your README file.
-
-  * The walkthrough video must show all of the technical acceptance criteria being met.
-
-  * The walkthrough video must demonstrate how to start the application’s server.
-
-  * The walkthrough video must demonstrate GET routes for all users and all thoughts being tested in Insomnia.
-
-  * The walkthrough video must demonstrate GET routes for a single user and a single thought being tested in Insomnia.
-
-  * The walkthrough video must demonstrate POST, PUT, and DELETE routes for users and thoughts being tested in Insomnia.
-
-  * Walkthrough video must demonstrate POST and DELETE routes for a user’s friend list being tested in Insomnia.
-
-  * Walkthrough video must demonstrate POST and DELETE routes for reactions to thoughts being tested in Insomnia.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * Uses the [Mongoose package](https://www.npmjs.com/package/mongoose) to connect to a MongoDB database.
-
-  * Includes User and Thought models outlined in the homework instructions.
-
-  * Includes schema settings for User and Thought models as outlined in the homework instructions.
-
-  * Includes Reactions as the `reaction` field's subdocument schema in the Thought model.
-
-  * Uses functionality to format queried timestamps properly.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality README with description and a link to a walkthrough video.
-
-### Bonus: +10 Points
-
-* Application deletes a user's associated thoughts when the user is deleted.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+***
