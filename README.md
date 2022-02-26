@@ -20,8 +20,6 @@
 
 ***
 
-- [NoSQL(Mongoose and MongoDB) - Social Network API - Assignment 12](#nosqlmongoose-and-mongodb---social-network-api---assignment-12)
-  - [Table of Contents](#table-of-contents)
   - [Description](#description)
     - [How to Test Properly and Easily](#how-to-test-properly-and-easily)
   - [Installation](#installation)
@@ -44,18 +42,18 @@
 
 
 
-    Project was developed with starter code. This is an API for a social network web application , where users can share their thoughts, react to friends’ thoughts, and create a friend list. Basically the full back end of a social media app. It uses Mongo and mongoose as its database storage, and uses express as its router for all endpoints. While all programmed using Node.js to tie it all in, its been interesting, and has shown me how social media apps can work conceptually. Getting all the endpoints to work with Mongo and mongoose, made me understand how routing properly works, and how the schemas(models) work as well in relation to MySql. Another step in the direction of completeing the whole stack. 
+Project was developed with starter code. This is an API for a social network web application , where users can share their thoughts, react to friends’ thoughts, and create a friend list. Basically the full back end of a social media app. It uses Mongo and mongoose as its database storage, and uses express as its router for all endpoints. While all programmed using Node.js to tie it all in, its been interesting, and has shown me how social media apps can work conceptually. Getting all the endpoints to work with Mongo and mongoose, made me understand how routing properly works, and how the schemas(models) work as well in relation to MySql. Another step in the direction of completeing the whole stack. 
 
 ### How to Test Properly and Easily
 
-    This program was tested through [Insomnia](https://docs.insomnia.rest/) for all its endpoints. Ive included the routes I tested in Insomnia, as a JSON file. (something probably not alot of people have included in their projects) You can import that file into your endpoint tester, or through Insomnia. IF you dont know how to do that, then [click here](docs.insomnia.rest).
+This program was tested through [Insomnia](https://docs.insomnia.rest/) for all its endpoints. Ive included the routes I tested in Insomnia, as a JSON file. (something probably not alot of people have included in their projects) You can import that file into your endpoint tester, or through Insomnia. IF you dont know how to do that, then [click here](docs.insomnia.rest).
 
 ***
 ## Installation
 
 ***
 If you are positioned on your root directory, then from
- the command line, type and run the following commands
+the command line, type and run the following commands
 
     `npm i`   
 
@@ -64,7 +62,7 @@ Thats it.
 
 This 'npm i' should install all the packages below, check the package.json
 file if its not installed see if they are even listed as a dependency,
- and if these files are not listed, these commands below will
+and if these files are not listed, these commands below will
 install them and give you an updated version.
 
     `npm install express`
