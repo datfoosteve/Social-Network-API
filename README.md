@@ -46,7 +46,7 @@ Project was developed with starter code. This is an API for a social network web
 
 ### How to Test Properly and Easily
 
-This program was tested through [Insomnia](https://docs.insomnia.rest/) for all its endpoints. Ive included the routes I tested in Insomnia, as a JSON file. (something probably not alot of people have included in their projects) You can import that file into your endpoint tester, or through Insomnia. IF you dont know how to do that, then [click here](docs.insomnia.rest).
+This program was tested through [Insomnia](https://docs.insomnia.rest/) for all its endpoints. Ive included the routes I tested in Insomnia, [as a JSON file](https://github.com/datfoosteve/Social-Network-API/blob/main/Insomnia_2022-02-25.json). (something probably not alot of people have included in their projects) You can import that file into your endpoint tester, or through Insomnia. IF you dont know how to do that, then [click here](docs.insomnia.rest).
 
 ***
 ## Installation
@@ -126,7 +126,7 @@ Stephen Puthenpurackal
 
     *Completed and Finalized*
 
-<img src="https://img.shields.io/github/last-commit/datfoosteve/E-Commerce-Omega" >
+<img src="https://img.shields.io/github/last-commit/datfoosteve/Social-Network-API" >
 
 ***
 ## Future Plans + Questions
